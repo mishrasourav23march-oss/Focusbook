@@ -31,17 +31,32 @@
 
     /* Learning Manager */
     .learning-manager {
-        position: fixed;
-        right: 20px;
-        bottom: 20px;
-        width: 340px;
-        background: #111827;
-        border-radius: 16px;
-        padding: 16px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-        border: 1px solid #1f2937;
-        z-index: 999;
-    }
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    width: 320px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    z-index: 9999;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+/* Ensures content does not push learning manager down in Google Sites iframe */
+.container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.content {
+    flex: 1;
+    margin-right: 360px;
+}
+
+/* Prevent horizontal scroll issues inside iframe */
+body {
+    overflow-x: hidden;
+}
 
     .mentor {
         display: flex;
@@ -145,115 +160,51 @@ The system will automatically format it.
 
 <div class="content" id="lessonContent">
     <div id="lessonRaw" style="display:none;">
-Self-Paced Study Strategy — An Evidence-Based Perspective
-Self-paced study refers to a learning approach in which learners control the speed, timing, and sequence of their learning rather than following a fixed schedule. Research in educational psychology and cognitive science shows that when designed properly, self-paced learning can improve understanding, retention, motivation, and long-term performance.
+### Optimizing Student Achievement Through Evidence-Based Learning and Self-Regulation
 
-1. Theoretical Foundations
-a. Self-Regulated Learning (SRL)
-Self-paced study is strongly linked with self-regulated learning, where learners actively plan, monitor, and evaluate their learning.
-Evidence shows that successful learners:
-Set clear goals
+The pursuit of academic success is increasingly guided by instructional theories that leverage the mechanics of human cognition and motivation. By integrating strategies like the testing effect, spacing, and interleaving within frameworks like mastery learning and self-regulated learning (SRL), educators and students can create more efficient and durable paths to competence.
 
+#### Core Cognitive Strategies for Long-Term Retention
 
-Monitor their understanding
+Research consistently demonstrates that certain study techniques significantly outperform others in producing long-term retention.
 
+The Testing Effect: Taking tests on material, rather than just rereading it, can sometimes more than double retention. While students often favor rereading, retrieval practice through answering or generating questions leads to superior memory performance. Generating one's own questions may promote deeper engagement through synthesis and elaboration, though it is often less time-efficient than answering provided questions.
 
-Adjust strategies when facing difficulty
+The Spacing Effect: Learning is most effective when study sessions are spaced out over time rather than crammed into massed presentations. Spacing reduces the probability of forgetting by ensuring active recall occurs at increasing intervals.
 
+Interleaved Practice: Mixing different types of problems or topics during a single study session, known as interleaving, requires students to choose the correct strategy for each problem. This strengthens the association between a problem's features and its corresponding solution strategy.
 
-Reflect on outcomes
+#### Frameworks for Achieving Competence
 
+To ensure all students reach a high level of proficiency, comprehensive models like mastery learning provide structured pathways for development.
 
-Students trained in SRL strategies consistently show higher academic achievement because they become active participants rather than passive receivers of information.
+Mastery Learning Model: This approach requires students to reach a predefined level of mastery (often 80–90%) before proceeding to new material. The cycle involves initial instruction, formative assessment, and corrective activities for those who do not initially meet the standard. Mastery learning emphasizes that every student can learn if given sufficient help and time.
 
-b. Cognitive Load Theory
-Learning is more effective when cognitive load is managed. Self-paced learning allows learners to:
-Pause when content becomes complex
+Cognitive Load Management: Effective instruction must account for the limited capacity of working memory. Intrinsic load (the difficulty of the content) must be balanced with the reduction of extraneous load (unnecessary distractions from poor design) to maximize self-perceived learning.
 
+#### The Power of Self-Regulated Learning (SRL)
 
-Review difficult concepts
+Success in complex or self-paced environments relies heavily on a student's ability to self-regulate. Zimmerman’s cyclical model describes SRL through three phases:
 
+1. Forethought: This includes task analysis (goal setting and strategic planning) and self-motivation beliefs like self-efficacy, autonomy, and interest.
+2. Performance: The phase where learners use metacognitive and volitional control to stay on task.
+3. Self-Reflection: Learners evaluate their performance and assign causal attributions, which then influence their future motivation and goals.
 
-Progress faster through easier sections
+#### Metacognition and Self-Pacing
 
+Self-paced learning allows students to achieve competency at their own rate. However, its effectiveness depends on metacognitive monitoring accuracy—the ability to judge what has been learned and what still needs study. Successful self-pacers often use a discrepancy reduction strategy, where they allocate more study time to items they judge to be normatively difficult. Conversely, poor monitoring can lead to procrastination, characterized by study bursts immediately before a deadline. Strategies to deter procrastination include contingent schedules, where access to new practice materials is only granted after completing previous tasks.
 
-This reduces overload in working memory and supports deeper processing.
+#### Practical Implementation in Digital Contexts
 
-c. Mastery Learning Principle
-Research by Benjamin Bloom demonstrated that learners achieve higher mastery when they are allowed to:
-Learn at their own pace
+Digital learning provides unique opportunities to satisfy the need for autonomy by allowing learners to choose when and how they engage with material. To optimize these environments, designers should provide:
 
+Clear Learning Goals: Using SMART or Mager models to define what constitutes success.
 
-Practice until competency is reached
+Actionable Feedback: Providing specific information on how to bridge the gap between current and desired performance.
 
+Support for Relatedness: Overcoming the isolation of online learning through forums, peer mentoring, or collaborative arrangements.
 
-Receive feedback before moving ahead
-
-
-Self-paced systems align naturally with mastery learning.
-
-2. Evidence-Based Benefits
-✅ Improved Retention
-Spacing learning over time (spacing effect) improves long-term memory compared to fixed, massed learning sessions.
-✅ Increased Motivation and Autonomy
-Self-Determination Theory shows that autonomy increases intrinsic motivation. When learners control pace, engagement increases.
-✅ Better Individualization
-Learners differ in prior knowledge, processing speed, and attention span. Self-paced learning adapts naturally to these differences.
-✅ Reduced Anxiety
-Students experience less performance pressure when learning without strict time constraints.
-
-3. Evidence-Based Strategies for Effective Self-Paced Study
-a. Goal Setting
-Break learning into small, measurable goals.
- Example:
-Instead of “study biology,” use “complete photosynthesis concept and test.”
-
-
-b. Retrieval Practice
-Testing yourself improves memory more than rereading notes.
-c. Spaced Repetition
-Review material at increasing intervals to strengthen memory pathways.
-d. Interleaving
-Mix related topics instead of studying one topic for long periods.
-e. Reflection and Self-Assessment
-Regularly ask:
-What did I understand?
-
-
-What is still unclear?
-
-
-
-4. Common Challenges (and Evidence-Based Solutions)
-Challenge
-Evidence-Based Solution
-Procrastination
-Time blocking and short study intervals
-Overconfidence
-Frequent self-testing
-Lack of structure
-Pre-planned learning roadmap
-Reduced persistence
-Progress tracking and feedback
-
-
-5. When Self-Paced Study Works Best
-Research suggests strongest outcomes when:
-Learning goals are clearly defined
-
-
-Feedback is available
-
-
-Learners receive guidance on study strategies
-
-
-Progress is monitored
-
-
-
-Conclusion
-Self-paced study is not simply “learning alone.” From an evidence-based perspective, it is effective because it aligns with how the brain learns — through repetition, feedback, reflection, and controlled cognitive load. When combined with structured strategies like retrieval practice and spaced learning, it becomes one of the most efficient approaches for deep and lasting learning.
+By combining these components, learners can transition from passive recipients of information to active, self-regulated masters of their own education.
 
     </div>
 
@@ -434,6 +385,3 @@ function updateCompletionScore() {
 
 </body>
 </html>
-
-
-
