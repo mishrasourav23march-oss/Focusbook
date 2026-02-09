@@ -1,288 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FocusBook Lesson</title>
+</div>
+</div>
 
-<style>
-/* ---------------- GENERAL PAGE ---------------- */
-body {
-    margin: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: #f5f7fb;
-    color: #1c1c1c;
-    line-height: 1.7;
-}
 
-.main-content {
-    max-width: 820px;
-    margin: auto;
-    padding: 60px 20px 120px 20px;
-}
+<button class="next-btn">Next: Self-Regulated Learning →</button>
 
-h1, h2, h3 {
-    color: #1f2d3d;
-}
-
-/* ---------------- LEARNING MANAGER ---------------- */
-.learning-manager {
-    position: fixed;
-    right: 20px;
-    top: 80px;
-    width: 320px;
-    background: white;
-    border-radius: 18px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-    overflow: hidden;
-    z-index: 9999;
-    transform: translateX(120%);
-    transition: transform 0.5s ease, opacity 0.3s ease;
-}
-
-.learning-manager.visible {
-    transform: translateX(0);
-}
-
-.learning-manager.hidden {
-    opacity: 0.2;
-}
-
-.manager-header {
-    background: linear-gradient(135deg,#1f3c88,#3a6ff7);
-    color: white;
-    padding: 18px;
-}
-
-.manager-title {
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.manager-subtitle {
-    font-size: 13px;
-    opacity: 0.85;
-}
-
-.manager-body {
-    padding: 16px;
-}
-
-.card {
-    background: #f7f9fc;
-    border-radius: 12px;
-    padding: 14px;
-    margin-bottom: 14px;
-}
-
-.progress-bar {
-    height: 8px;
-    background: #e1e6ef;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-top: 6px;
-}
-
-.progress-fill {
-    height: 100%;
-    width: 0%;
-    background: linear-gradient(90deg,#23c483,#39d98a);
-    transition: width 0.4s ease;
-}
-
-.stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-}
-
-.stat-box {
-    background: white;
-    border-radius: 10px;
-    padding: 10px;
-    text-align: center;
-    box-shadow: 0 5px 12px rgba(0,0,0,0.06);
-}
-
-.stat-number {
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.criteria {
-    font-size: 13px;
-    margin-top: 8px;
-}
-
-.status-red { color: #e63946; }
-.status-green { color: #1aa75b; }
-
-.next-btn {
-    width: 100%;
-    background: linear-gradient(135deg,#2d6cdf,#4b8cff);
-    border: none;
-    color: white;
-    padding: 12px;
-    border-radius: 10px;
-    font-size: 15px;
-    cursor: pointer;
-}
-
-.collapse-btn {
-    position: absolute;
-    bottom: -18px;
-    right: 20px;
-    background: white;
-    border-radius: 20px;
-    padding: 6px 14px;
-    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
-    cursor: pointer;
-    font-size: 13px;
-}
-
-.collapsed {
-    height: 70px !important;
-    overflow: hidden;
-}
-
-</style>
-</head>
-
-<body>
-
-<div class="main-content">
-
-<h1>Optimizing Student Achievement Through Evidence-Based Learning and Self-Regulation</h1>
-
-<p>The pursuit of academic success is increasingly guided by instructional theories that leverage the mechanics of human cognition and motivation. By integrating strategies like the <b>testing effect</b>, <b>spacing</b>, and <b>interleaving</b> within frameworks like <b>mastery learning</b> and <b>self-regulated learning (SRL)</b>, educators and students can create more efficient and durable paths to competence.</p>
-
-<h2>Core Cognitive Strategies for Long-Term Retention</h2>
-<p>Research consistently demonstrates that certain study techniques significantly outperform others in producing long-term retention.</p>
-
-<ul>
-<li><b>The Testing Effect:</b> Retrieval practice strengthens memory more than rereading.</li>
-<li><b>The Spacing Effect:</b> Learning improves when sessions are distributed over time.</li>
-<li><b>Interleaved Practice:</b> Mixing problems strengthens strategy selection.</li>
-</ul>
-
-<h2>Frameworks for Achieving Competence</h2>
-<p>Mastery learning requires students to reach a defined level of competence before advancing. Cognitive load management ensures working memory is not overloaded by unnecessary distractions.</p>
-
-<h2>The Power of Self-Regulated Learning (SRL)</h2>
-<p>Zimmerman’s model describes forethought, performance, and self-reflection phases that guide effective learning behaviour.</p>
-
-<h2>Metacognition and Self-Pacing</h2>
-<p>Successful learners allocate time based on perceived difficulty and avoid procrastination through structured progression.</p>
-
-<h2>Practical Implementation in Digital Contexts</h2>
-<p>Digital environments should provide clear goals, actionable feedback, and support for relatedness to maximize engagement.</p>
 
 </div>
 
-<!-- LEARNING MANAGER -->
-<div id="learningManager" class="learning-manager">
 
-    <div class="manager-header">
-        <div class="manager-title">Learning Manager</div>
-        <div class="manager-subtitle">Stay Focused & Learn Smart</div>
-    </div>
-
-    <div id="managerBody" class="manager-body">
-
-        <div class="card">
-            <b>Focus Time:</b> <span id="timer">00:00</span>
-            <div class="progress-bar">
-                <div id="progressFill" class="progress-fill"></div>
-            </div>
-        </div>
-
-        <div class="stats">
-            <div class="stat-box">
-                <div class="stat-number" id="scrollPercent">0%</div>
-                <div>Read</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-number" id="focusScore">0%</div>
-                <div>Focus</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-number" id="timeSpent">0m</div>
-                <div>Time</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <b>Lesson Status</b>
-            <div id="criteriaText" class="criteria status-red">
-                Complete reading to unlock next lesson
-            </div>
-        </div>
-
-        <button class="next-btn">Next: Self-Regulated Learning →</button>
-
-    </div>
-
-    <div class="collapse-btn" onclick="toggleCollapse()">Collapse</div>
+<div class="collapse-btn" onclick="toggleCollapse()">Collapse</div>
 </div>
+
 
 <script>
 
+
 /* -------- SLIDE IN ANIMATION -------- */
 window.addEventListener("load", () => {
-    setTimeout(() => {
-        document.getElementById("learningManager").classList.add("visible");
-    }, 300);
+setTimeout(() => {
+document.getElementById("learningManager").classList.add("visible");
+}, 300);
 });
+
 
 /* -------- TIMER -------- */
 let seconds = 0;
 setInterval(() => {
-    seconds++;
-    let m = String(Math.floor(seconds / 60)).padStart(2,'0');
-    let s = String(seconds % 60).padStart(2,'0');
-    document.getElementById("timer").textContent = `${m}:${s}`;
-    document.getElementById("timeSpent").textContent = Math.floor(seconds/60)+"m";
+seconds++;
+let m = String(Math.floor(seconds / 60)).padStart(2,'0');
+let s = String(seconds % 60).padStart(2,'0');
+document.getElementById("timer").textContent = `${m}:${s}`;
+document.getElementById("timeSpent").textContent = Math.floor(seconds/60)+"m";
 },1000);
+
 
 /* -------- SCROLL TRACKING -------- */
 window.addEventListener("scroll", () => {
-    let scrollTop = window.scrollY;
-    let docHeight = document.body.scrollHeight - window.innerHeight;
-    let percent = Math.round((scrollTop/docHeight)*100);
+let scrollTop = window.scrollY;
+let docHeight = document.body.scrollHeight - window.innerHeight;
+let percent = Math.round((scrollTop/docHeight)*100);
 
-    percent = Math.max(0, Math.min(100, percent));
 
-    document.getElementById("scrollPercent").textContent = percent + "%";
-    document.getElementById("progressFill").style.width = percent + "%";
+percent = Math.max(0, Math.min(100, percent));
 
-    let focus = Math.min(100, Math.floor(percent * 0.9));
-    document.getElementById("focusScore").textContent = focus + "%";
 
-    if(percent > 80){
-        let text = document.getElementById("criteriaText");
-        text.textContent = "All criteria met. Great focus!";
-        text.classList.remove("status-red");
-        text.classList.add("status-green");
-    }
+document.getElementById("scrollPercent").textContent = percent + "%";
+document.getElementById("progressFill").style.width = percent + "%";
+
+
+let focus = Math.min(100, Math.floor(percent * 0.9));
+document.getElementById("focusScore").textContent = focus + "%";
+
+
+if(percent > 80){
+let text = document.getElementById("criteriaText");
+text.textContent = "All criteria met. Great focus!";
+text.classList.remove("status-red");
+text.classList.add("status-green");
+}
 });
+
 
 /* -------- COLLAPSE -------- */
 function toggleCollapse(){
-    document.getElementById("learningManager").classList.toggle("collapsed");
+document.getElementById("learningManager").classList.toggle("collapsed");
 }
+
 
 /* -------- AUTO HIDE WHILE READING -------- */
 let hideTimer;
 window.addEventListener("scroll", () => {
-    const manager = document.getElementById("learningManager");
-    manager.classList.add("hidden");
-    clearTimeout(hideTimer);
-    hideTimer = setTimeout(()=>{
-        manager.classList.remove("hidden");
-    },1500);
+const manager = document.getElementById("learningManager");
+manager.classList.add("hidden");
+clearTimeout(hideTimer);
+hideTimer = setTimeout(()=>{
+manager.classList.remove("hidden");
+},1500);
 });
 
+
 </script>
+
 
 </body>
 </html>
