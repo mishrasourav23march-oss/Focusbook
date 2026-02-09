@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FOCUSBOOK Learning Manager - Level 2</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #0f172a;
+        color: white;
+        line-height: 1.6;
+    }
+
+    .content {
+        max-width: 800px;
+        margin: auto;
+        padding: 40px 20px;
+    }
+
+    h1 { color: #facc15; }
+
+    .section {
+        margin-bottom: 80px;
+        padding: 20px;
+        background: #020617;
+        border-radius: 12px;
+    }
+
+    /* Learning Manager */
+    .learning-manager {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 340px;
+        background: #111827;
+        border-radius: 16px;
+        padding: 16px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        border: 1px solid #1f2937;
+        z-index: 999;
+    }
+
+    .mentor {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: linear-gradient(135deg,#facc15,#eab308);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: #111827;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0%,100% { transform: translateY(0px); }
+        50% { transform: translateY(-5px); }
+    }
+
+    .mentor-text {
+        font-size: 14px;
+        color: #e5e7eb;
+    }
+
+    .progress-bar {
+        height: 10px;
+        background: #1f2937;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+
+    .progress-fill {
+        height: 100%;
+        width: 0%;
+        background: #ef4444;
+        transition: width 0.3s ease;
+    }
+
+    .status { font-size: 14px; margin: 8px 0; }
+    .status.red { color: #ef4444; }
+    .status.green { color: #22c55e; }
+
+    .timer, .focus-score, .scroll-status, .completion-score {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .completion-score {
+        font-weight: bold;
+        color: #facc15;
+    }
+
+    .warning {
+        font-size: 13px;
+        color: #f97316;
+        display: none;
+    }
+
+    .checklist label {
+        display: block;
+        margin: 6px 0;
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- ================= LESSON CONTENT AREA ================= -->
+<!--
+FOCUSBOOK TEMPLATE INSTRUCTIONS:
+
+You only paste your lesson text below inside the div with id="lessonRaw".
+
+RULES:
+1. First line = Lesson Title
+2. Leave ONE empty line after title
+3. Use empty lines between paragraphs
+4. Use ALL CAPS line for section headings
+
+Example:
+
+SELF PACED STUDY STRATEGY
+
+WHAT THIS MEANS
+Self paced study allows learners...
+
+WHY IT WORKS
+Research shows...
+
+The system will automatically format it.
+-->
+
+<div class="content" id="lessonContent">
+    <div id="lessonRaw" style="display:none;">
+Self-Paced Study Strategy — An Evidence-Based Perspective
+Self-paced study refers to a learning approach in which learners control the speed, timing, and sequence of their learning rather than following a fixed schedule. Research in educational psychology and cognitive science shows that when designed properly, self-paced learning can improve understanding, retention, motivation, and long-term performance.
+
+1. Theoretical Foundations
+a. Self-Regulated Learning (SRL)
+Self-paced study is strongly linked with self-regulated learning, where learners actively plan, monitor, and evaluate their learning.
+Evidence shows that successful learners:
+Set clear goals
+
+
+Monitor their understanding
+
+
+Adjust strategies when facing difficulty
+
+
+Reflect on outcomes
+
+
+Students trained in SRL strategies consistently show higher academic achievement because they become active participants rather than passive receivers of information.
+
+b. Cognitive Load Theory
+Learning is more effective when cognitive load is managed. Self-paced learning allows learners to:
+Pause when content becomes complex
+
+
+Review difficult concepts
+
+
+Progress faster through easier sections
+
+
+This reduces overload in working memory and supports deeper processing.
+
+c. Mastery Learning Principle
+Research by Benjamin Bloom demonstrated that learners achieve higher mastery when they are allowed to:
+Learn at their own pace
+
+
+Practice until competency is reached
+
+
+Receive feedback before moving ahead
+
+
+Self-paced systems align naturally with mastery learning.
+
+2. Evidence-Based Benefits
+✅ Improved Retention
+Spacing learning over time (spacing effect) improves long-term memory compared to fixed, massed learning sessions.
+✅ Increased Motivation and Autonomy
+Self-Determination Theory shows that autonomy increases intrinsic motivation. When learners control pace, engagement increases.
+✅ Better Individualization
+Learners differ in prior knowledge, processing speed, and attention span. Self-paced learning adapts naturally to these differences.
+✅ Reduced Anxiety
+Students experience less performance pressure when learning without strict time constraints.
+
+3. Evidence-Based Strategies for Effective Self-Paced Study
+a. Goal Setting
+Break learning into small, measurable goals.
+ Example:
+Instead of “study biology,” use “complete photosynthesis concept and test.”
+
+
+b. Retrieval Practice
+Testing yourself improves memory more than rereading notes.
+c. Spaced Repetition
+Review material at increasing intervals to strengthen memory pathways.
+d. Interleaving
+Mix related topics instead of studying one topic for long periods.
+e. Reflection and Self-Assessment
+Regularly ask:
+What did I understand?
+
+
+What is still unclear?
+
+
+
+4. Common Challenges (and Evidence-Based Solutions)
+Challenge
+Evidence-Based Solution
+Procrastination
+Time blocking and short study intervals
+Overconfidence
+Frequent self-testing
+Lack of structure
+Pre-planned learning roadmap
+Reduced persistence
+Progress tracking and feedback
+
+
+5. When Self-Paced Study Works Best
+Research suggests strongest outcomes when:
+Learning goals are clearly defined
+
+
+Feedback is available
+
+
+Learners receive guidance on study strategies
+
+
+Progress is monitored
+
+
+
+Conclusion
+Self-paced study is not simply “learning alone.” From an evidence-based perspective, it is effective because it aligns with how the brain learns — through repetition, feedback, reflection, and controlled cognitive load. When combined with structured strategies like retrieval practice and spaced learning, it becomes one of the most efficient approaches for deep and lasting learning.
+
+    </div>
+
+    <div id="lessonFormatted"></div>
+</div>
+
+
+<!-- ================= LEARNING MANAGER ================= -->
+
+<div class="learning-manager">
+
+    <div class="mentor">
+        <div class="avatar">M</div>
+        <div class="mentor-text" id="mentorMessage">
+            Stay focused. Complete each step to finish the lesson.
+        </div>
+    </div>
+
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <div class="timer">Time on page: <span id="timer">00:00</span></div>
+    <div class="focus-score">Focus score: <span id="focusScore">100%</span></div>
+    <div class="scroll-status">Scroll progress: <span id="scrollStatus">0%</span></div>
+    <div class="completion-score">Completion Score: <span id="completionScore">0%</span></div>
+
+    <div class="warning" id="idleWarning">You seem inactive. Stay focused.</div>
+
+    <div class="checklist">
+        <label><input type="checkbox" class="task"> Concept understood</label>
+        <label><input type="checkbox" class="task"> Practiced questions</label>
+        <label><input type="checkbox" class="task"> Self-tested</label>
+        <label><input type="checkbox" class="task"> Reviewed again</label>
+    </div>
+
+    <div id="status" class="status red">Complete all steps before continuing.</div>
+
+</div>
+
+<script>
+
+/* ================= AUTO FORMAT LESSON ================= */
+const rawText = document.getElementById("lessonRaw").innerText.trim();
+const lines = rawText.split("\n");
+const container = document.getElementById("lessonFormatted");
+
+let firstLine = true;
+let currentSection = null;
+
+lines.forEach(line => {
+    line = line.trim();
+    if (!line) return;
+
+    if (firstLine) {
+        const title = document.createElement("h1");
+        title.textContent = line;
+        container.appendChild(title);
+        firstLine = false;
+        return;
+    }
+
+    if (line === line.toUpperCase()) {
+        currentSection = document.createElement("div");
+        currentSection.className = "section";
+
+        const heading = document.createElement("h2");
+        heading.textContent = line;
+
+        currentSection.appendChild(heading);
+        container.appendChild(currentSection);
+        return;
+    }
+
+    const p = document.createElement("p");
+    p.textContent = line;
+
+    if (currentSection) {
+        currentSection.appendChild(p);
+    } else {
+        container.appendChild(p);
+    }
+});
+
+
+/* ================= TIMER ================= */
+let seconds = 0;
+setInterval(() => {
+    seconds++;
+    let mins = Math.floor(seconds / 60);
+    let secs = seconds % 60;
+    document.getElementById("timer").textContent =
+        String(mins).padStart(2, '0') + ":" + String(secs).padStart(2, '0');
+    updateCompletionScore();
+}, 1000);
+
+
+/* ================= CHECKLIST + PROGRESS ================= */
+const tasks = document.querySelectorAll('.task');
+const progressFill = document.getElementById('progressFill');
+const status = document.getElementById('status');
+
+function updateProgress() {
+    let checked = document.querySelectorAll('.task:checked').length;
+    let total = tasks.length;
+    let percent = (checked / total) * 100;
+
+    progressFill.style.width = percent + "%";
+
+    if (checked === total) {
+        progressFill.style.background = "#22c55e";
+        status.textContent = "Good progress. You are ready to continue.";
+        status.classList.remove('red');
+        status.classList.add('green');
+        document.getElementById("mentorMessage").textContent = "Excellent. You completed all learning actions.";
+    } else {
+        progressFill.style.background = "#ef4444";
+        status.textContent = "Complete all steps before continuing.";
+        status.classList.remove('green');
+        status.classList.add('red');
+    }
+
+    updateCompletionScore();
+}
+
+tasks.forEach(task => task.addEventListener('change', updateProgress));
+
+
+/* ================= SCROLL TRACKING ================= */
+let scrollPercentGlobal = 0;
+window.addEventListener('scroll', () => {
+    const content = document.getElementById('lessonContent');
+    const scrollTop = window.scrollY;
+    const height = content.scrollHeight - window.innerHeight;
+    scrollPercentGlobal = Math.min(100, Math.round((scrollTop / height) * 100));
+
+    document.getElementById('scrollStatus').textContent = scrollPercentGlobal + "%";
+    updateCompletionScore();
+});
+
+
+/* ================= IDLE DETECTION ================= */
+let idleTime = 0;
+let focusScore = 100;
+
+setInterval(() => {
+    idleTime++;
+    if (idleTime > 10) {
+        document.getElementById("idleWarning").style.display = "block";
+        focusScore = Math.max(40, focusScore - 2);
+    }
+    document.getElementById("focusScore").textContent = focusScore + "%";
+    updateCompletionScore();
+}, 1000);
+
+function resetIdle() {
+    idleTime = 0;
+    document.getElementById("idleWarning").style.display = "none";
+}
+
+window.addEventListener('mousemove', resetIdle);
+window.addEventListener('keydown', resetIdle);
+window.addEventListener('scroll', resetIdle);
+
+
+/* ================= COMPLETION SCORE ================= */
+function updateCompletionScore() {
+    let taskScore = document.querySelectorAll('.task:checked').length / tasks.length;
+    let timeScore = Math.min(1, seconds / 180);
+    let scrollScore = scrollPercentGlobal / 100;
+
+    let finalScore = Math.round((taskScore * 50) + (timeScore * 20) + (scrollScore * 30));
+
+    document.getElementById("completionScore").textContent = finalScore + "%";
+}
+
+</script>
+
+</body>
+</html>
+
+
+
